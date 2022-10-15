@@ -2,16 +2,16 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.187.0/containers/kubernetes-helm-minikube
 {
 	"name": "wx-de-fe-be development container",
-	//"customizations": {
-	//	// Configure properties specific to VS Code.
-	//	"vscode": {
-	//		"settings": {
-	//			"dotfiles.repository": "BlakeWilliams/dotfiles",
-	//			"dotfiles.targetPath": "~/dotfiles",
-	//			"dotfiles.installCommand": "~/dotfiles/script/setup"
-	//		}
-	//	}
-	//},
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {
+				"dotfiles.repository": "JonZudell/dotfiles",
+				"dotfiles.targetPath": "~/dotfiles",
+				"dotfiles.installCommand": "~/dotfiles/setup.sh"
+			}
+		}
+	},
 	"dockerFile": "Dockerfile",
 	"runArgs": ["--init", "--privileged"],
 	"mounts": [
