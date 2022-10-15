@@ -8,6 +8,11 @@ Apache Airflow triggers Cron Jobs to dump data into Spark
 ## Development
 Supported Tooling
 
+### Version Control Setup
+```
+git config --global user.email "jonathon.zudell@gmail.com"
+git config --global user.name "Jon Zudell"
+```
 ### VSCode
 Connect to the dev container  Kubernetes - Minikube-in-Docker
 

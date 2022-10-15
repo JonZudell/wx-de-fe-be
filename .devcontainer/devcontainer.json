@@ -2,6 +2,15 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.187.0/containers/kubernetes-helm-minikube
 {
 	"name": "Kubernetes - Minikube-in-Docker",
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {
+				"dotfiles.repository": "BlakeWilliams/dotfiles",
+				"dotfiles.targetPath": "~/dotfiles",
+			}
+		}
+	},
 	"dockerFile": "Dockerfile",
 	"runArgs": ["--init", "--privileged"],
 	"mounts": [
