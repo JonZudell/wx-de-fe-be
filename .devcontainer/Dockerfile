@@ -27,6 +27,3 @@ VOLUME [ "/var/lib/docker" ]
 # The script will also execute CMD if you need to alter startup behaviors.
 ENTRYPOINT [ "/usr/local/share/docker-init.sh" ]
 CMD [ "sleep", "infinity" ]
-
-# [Optional] Uncomment this section to install additional OS packages.
-RUN apt-get update && apt-get -y install  uild-essential procps curl file git
