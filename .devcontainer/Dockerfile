@@ -17,6 +17,17 @@ RUN apt-get update && /bin/bash /tmp/library-scripts/common-debian.sh "${INSTALL
     && chown ${USERNAME} /home/${USERNAME}/.minikube \
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/
 
+####################################################
+################## wx-de-fe-be #####################
+####################################################
+RUN apt install build-essential procps curl file git
+RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+RUN helm repo add apache-airflow https://airflow.apache.org \
+    && helm repo add microsoft https://microsoft.github.io/charts/repo/
+RUN usermod -aG docker ${USERNAME} && newgrp docker
+
+RUN brew update && brew install minikube pipenv gh
+
 VOLUME [ "/var/lib/docker" ]
 
 # Setting the ENTRYPOINT to docker-init.sh will start up the Docker Engine 
