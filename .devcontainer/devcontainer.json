@@ -8,6 +8,7 @@
 			"settings": {
 				"dotfiles.repository": "BlakeWilliams/dotfiles",
 				"dotfiles.targetPath": "~/dotfiles",
+				"dotfiles.installCommand": "~/dotfiles/script/setup"
 			}
 		}
 	},
