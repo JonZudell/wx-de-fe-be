@@ -1,0 +1,4 @@
+images:
+  airflow:
+    tag: 0.0.1
+    repository: airflow-dags
