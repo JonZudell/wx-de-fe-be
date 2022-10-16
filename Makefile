@@ -1,6 +1,6 @@
 services = ./services/airflow/
 
-all: helm-repo-add start-minikube helm-upgrade
+all: helm-repo-add start-minikube build-containers helm-upgrade
 
 start-minikube:
 	minikube start
