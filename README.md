@@ -5,22 +5,18 @@ Weather Data-Engineering Front-End Back-End
 Apache Airflow triggers Cron Jobs to dump data into Spark
 ### Apache Airflow
 ### Spark
-## Development
-Supported Tooling
+## Development Environment
 https://code.visualstudio.com/docs/remote/containers
-### Version Control Setup
+### Defaults
 ```
-git config --global user.email "jonathon.zudell@gmail.com"
-git config --global user.name "Jon Zudell"
+# .devcontainer/devcontainer.json
+"vscode": {
+    "settings": {
+        "dotfiles.repository": "JonZudell/dotfiles",
+        "dotfiles.targetPath": "~/dotfiles"
+    }
+}
+# .devcontainer/Dockerfile
+FROM mcr.microsoft.com/vscode/devcontainers/base:0-buster
 ```
-### VSCode
-Connect to the dev container  Kubernetes - Minikube-in-Docker
-
-### Dev Container Setup
-```
-#!/usr/bin/env bash
-# add heln repository deps
-./dev_deps.sh
-# install deps into target namespaces in minikube
-./dev_cluster.sh
-```
+Run `./dotfile.sh` to enable `brew`.
