@@ -1,9 +1,6 @@
 services = ./services/airflow/
 
-all:
-	helm-repo-add
-	start-minikube
-	helm-upgrade
+all: helm-repo-add start-minikube helm-upgrade
 
 start-minikube:
 	minikube start
@@ -13,7 +10,6 @@ stop-minikube:
 	minkube stop
 
 delete-minikube:
-	minikube tunnel
 	minikube delete
 
 helm-repo-add: 
@@ -31,8 +27,4 @@ helm-uninstall:
 	helm uninstall airflow
 	helm uninstall spark
 
-clean:
-	helm-uninstall
-	delete-minikube
-	helm-repo-remove
-	
+clean: helm-uninstall helm-repo-remove delete-minikube 
