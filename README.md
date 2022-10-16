@@ -30,3 +30,4 @@ Airflow into Spark
 
 ### Apache Airflow
 services/airflow/
+needs a persistent volume claimn
