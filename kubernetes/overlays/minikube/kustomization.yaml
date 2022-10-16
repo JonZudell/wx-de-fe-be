@@ -2,8 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 bases:
 - ../../base
+patchesStrategicMerge:
+- patches/persistent-volume.yaml
 resources:
 - airflow-envvars-configmap.yaml
 - requirements-configmap.yaml
-patchesStrategicMerge:
-- patches/pvc.yaml
+- airflow-logs-pvc.yaml
