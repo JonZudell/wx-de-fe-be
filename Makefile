@@ -4,8 +4,7 @@ all: helm-repo-add start-minikube helm-upgrade
 
 start-minikube:
 	minikube start
-	minikube tunnel
-
+	
 stop-minikube:
 	minkube stop
 
@@ -19,7 +18,7 @@ helm-repo-add:
 helm-repo-remove:
 	helm repo remove microsoft apache-airflow
 
-helm-upgrade: helm-repo-add
+helm-upgrade:
 	helm upgrade --install airflow apache-airflow/airflow --namespace airflow --create-namespace -f ./services/airflow/values.yaml
 	helm upgrade --install spark microsoft/spark --namespace spark --create-namespace --version 1.0.4
 
