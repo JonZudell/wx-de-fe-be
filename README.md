@@ -5,7 +5,7 @@ Weather Data-Engineering Front-End Back-End
 Deveopment container on VSD Code
 https://code.visualstudio.com/docs/remote/containers
 
-![Architecture or Whatever](https://github.com/JonZudell/wx-de-fe-be/raw/development/documentation/assets/architecture-containers.png")
+![Architecture or Whatever](https://github.com/JonZudell/wx-de-fe-be/raw/development/documentation/assets/architecture-containers.png?raw=true")
 
 ### Environment Defaults
 
