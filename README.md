@@ -14,7 +14,8 @@ https://code.visualstudio.com/docs/remote/containers
 "vscode": {
     "settings": {
         "dotfiles.repository": "JonZudell/dotfiles",
-        "dotfiles.targetPath": "~/dotfiles"
+        "dotfiles.targetPath": "~/dotfiles",
+        "dotfiles.installCommand": "bash ~/dotfiles/setup.sh"
     }
 }
 ```
