@@ -1,4 +1,6 @@
-
+config:
+  webserver:
+    expose_config: 'True'
 env:
 -  name: AIRFLOW__CORE__LOAD_EXAMPLES
-   value: "True"
+   value: "False"
