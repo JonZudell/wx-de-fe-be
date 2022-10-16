@@ -4,6 +4,7 @@ all: helm-repo-add start-minikube helm-upgrade
 
 start-minikube:
 	minikube start
+	kubectl apply -k kubernetes/overlays/minikube/
 	
 stop-minikube:
 	minkube stop
