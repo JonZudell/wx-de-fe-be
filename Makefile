@@ -3,7 +3,7 @@ services = ./services/airflow/
 all: helm-repo-add start-minikube build-containers helm-upgrade
 
 start-minikube:
-	minikube start
+	minikube start --memory 8g --cpus 4
 	eval $(minikube -p minikube docker-env)
 	kubectl apply -k kubernetes/overlays/minikube/
 

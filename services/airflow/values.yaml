@@ -1,3 +1,9 @@
+dags:
+  gitSync:
+    enabled: true
+    repo: github.com/JonZudell/wx-de-fe-be.git
+    branch: development
+    subPath: "services/airflow/dags/"
 config:
   webserver:
     expose_config: 'True'
