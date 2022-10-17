@@ -1,1 +1,2 @@
 - fix spark
+- load airflows-envvars-configmap and airflow-logs-pvc or remove them
